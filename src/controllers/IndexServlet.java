@@ -37,7 +37,7 @@ public class IndexServlet extends HttpServlet {
 
         List<Message> messages = em.createNamedQuery("getAllMessages", Message.class)
                                  .getResultList();
-        response.getWriter().append(Interger.valueOf(messages.size()).toString());
+        response.getWriter().append(Integer.valueOf(messages.size()).toString());
 
         em.close();
     }
